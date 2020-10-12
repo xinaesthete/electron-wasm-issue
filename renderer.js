@@ -12,5 +12,6 @@ wasm.then((response) => {
 }).then(() => {
     alert(`initialized OK!`);
 }).catch((reason) => {
+    console.error(reason);
     alert(`failed: '${reason}'`);
 });

@@ -8,7 +8,7 @@ function createWindow () {
     width: 800,
     height: 600,
     webPreferences: {
-      contextIsolation: true,
+      contextIsolation: true, // <<< unsetting this allows the code to work with latest Electron <<<
       preload: path.join(__dirname, 'preload.js')
     }
   })
