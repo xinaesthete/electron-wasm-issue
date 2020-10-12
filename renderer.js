@@ -10,5 +10,7 @@ const wasm = fetch('./node_modules/vscode-oniguruma-wasm/release/onig.wasm');
 wasm.then((response) => {
     return onig.loadWASM(response);
 }).then(() => {
-    console.log(`initialized OK!`);
+    alert(`initialized OK!`);
+}).catch((reason) => {
+    alert(`failed: '${reason}'`);
 });
